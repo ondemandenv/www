@@ -20,8 +20,8 @@ Distributed systems like SOA/microservice are very difficult to develop, each se
       4) too difficult to track every change.
 4) GitOps can't handle the complexity, templating yamls are the new binary in cloud era.
    1) Too shallow and ridgid to adapt change, simple change can require huge unpractical amount of change of yamls.
-   2) One change can require multiple commits and multiple deployment for single deployment.
-   3) Too many repeats in yamls across many files and repos.
+   2) Can require multiple commits and multiple deployments across multiple repos for a single change.
+   3) Too many repeats in yamls across many files and repos, complexity grows exponentially.
    4) Certain files can easily reach thousands of lines, making it not scalable/sustainable
 3) New techologies are emerging every day.
     1) Keeping up is difficult. developers need to isolated environment with all dependencies can take significant effort to maintain.
