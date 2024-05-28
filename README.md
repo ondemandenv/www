@@ -40,26 +40,34 @@ Distributed systems like SOA/microservice are very difficult to develop, each se
    3) Configurable manual verification/approval based on IAM
 
 
-## Implementation
+## Implementation abstraction
 1) Data Model: team<-1:m->repo<-1:m->build<-1:m->service[deployment] | artifacts
    1) service[deployment] providing and consuming APIs by endpoints/topics.
    2) artifacts are container image or packages to be deployed as part of a service.
    3) service and artifacts both can have multiple versions/environments
 2) Abstract contracting/interface/boundary of each service, define them in static and strong typed code so that:
-   1) we have better IDE support.
-   2) we validate as early as compilation.
+   1) Better IDE support.
+   2) Validate as early as compilation.
 3) Define services' contracts in one repo as lib, and a central service to implement typical services and coordinate cross service dependencies.
-4) AWS CDK to leverage AWS as platform.
-   5) Each service can choose to have dedicated aws account or share with others.
+4) AWS CDK to describe data/function model
 5) Github as source repo and Github workflow as continue deployment service.
-6) Basic build types:
+6) AWS Cloudformation service to execute different stacks
+7) Basic build types:
    1) container image to ECR
    8) npm package to github package
    9) aws cdk deployment
-10) provided services
+10) provided basic services.
     1) rds serverless v2 postgres
-    12) eks
-    12) image from ecr to eks
+    12) eks cluster
 
 ## How to use
-
+1) Define a build in two parts:
+   1) In contracts repo together with other builds to declare how it contracts with other builds.
+      1) which repo and how to build
+      2) bootstraping target AWS account/region.
+      3) what value it consumes from others, vpc cidr? eks-cluster, ECR repo? authentication service's endpoint?
+      4) what value it produces, messaing topic? api endpoints? image in ECR? or package in github?
+   3) Implementing the contract, this is optional because there are typical basic implementations can be used by declaration in contracts repo.
+3) let the central deploy infrastructures including pipelines to build's aws account and github repo.
+4) trigger pipeline to run this build.
+5) build's output will trigger other builds.
