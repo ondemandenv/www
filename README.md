@@ -1,5 +1,5 @@
 ## Motivation
-Distributed systems like SOA/microservice are very difficult to develop, each service can take many parts to work, brings up the problems:
+Distributed systems like SOA/microservice are very difficult to develop, each service can take many parts to work, services can depend on each other for various reasons, this brings up the problems:
 1) Maintain the consistency/certainty inbetween parts of each service is difficult.
    1) Missing assets/image
    2) Using wrong configuration from
