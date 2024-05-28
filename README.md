@@ -9,7 +9,7 @@ Distributed systems like SOA/microservice are very difficult to develop, each se
 2) Maintain the consistency/certainty inbetween services is even more difficult.
    3) beside configuration, service API changing
    4) messaging schema changing
-4) Manual configuration already reached to limit
+3) Manual configuration already reached to limit
    1) Can't remember what/how/why/where/when, can easily be hijacked
       1) who/how/why created that repo?
       2) what/how/where/when is the repo deployed last time?
@@ -17,8 +17,11 @@ Distributed systems like SOA/microservice are very difficult to develop, each se
       5) Is the code in the repo consistent to the deployed?
    2) Human mistake is inevitable and taking significant effort
       3) one typo can easily take hours for a complex system
-      4) too difficult to 
-
+      4) too difficult to track every change.
+4) GitOps can't handle the complexity, yamls are the new binary in cloud era.
+   1) One change can require multiple commits and multiple deployment for single deployment.
+   2) Too many repeats in yamls across many files and repos.
+   3) Certain files can easily reach thousands of lines, making it not scalable/sustainable
 3) New techologies are emerging every day.
     1) Keeping up is difficult. developers need to isolated environment with all dependencies can take significant effort to maintain.
     2) Using/Integrating is risky.
