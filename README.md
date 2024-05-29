@@ -58,6 +58,7 @@ Distributed systems like SOA/microservice are very difficult to develop, each se
 6) AWS Cloudformation service to execute different stacks
 7) Basic build types:
    1) container image to ECR
+   2) ECR image deploy to EKS
    8) npm package to github package
    9) aws cdk deployment
 10) provided basic services.
