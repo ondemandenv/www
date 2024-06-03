@@ -23,11 +23,7 @@ Distributed systems like SOA/microservice are very difficult to develop, each se
    2) Can require multiple commits and multiple deployments across multiple repos for a single change.
    3) Too many repeats in yamls across many files and repos, complexity grows exponentially.
    4) Certain files can easily reach thousands of lines, making it not scalable/sustainable
-3) New techologies are emerging every day.
-    1) Keeping up is difficult. developers need to isolated environment with all dependencies can take significant effort to maintain.
-    2) Using/Integrating is risky.
   
-
 
 ## Philosophy & Goals
 1) For a distributed systems like SOA/microservice, each service needs multiple environment/versions, so that 
@@ -49,6 +45,7 @@ Distributed systems like SOA/microservice are very difficult to develop, each se
    1) service[deployment] providing and consuming APIs by endpoints/topics.
    2) artifacts are container image or packages to be deployed as part of a service.
    3) service and artifacts both can have multiple versions/environments
+   4) see https://github.com/ondemandenv/odmd-build-contracts for more details.
 2) Abstract contracting/interface/boundary of each service, define them in static and strong typed code so that:
    1) Better IDE support.
    2) Validate as early as compilation.
