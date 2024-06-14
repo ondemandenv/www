@@ -73,3 +73,6 @@ Distributed systems like SOA/microservice are very difficult to develop, each se
 3) let the central deploy infrastructures including pipelines to build's aws account and github repo.
 4) trigger pipeline to run this build.
 5) build's output will trigger other builds.
+
+
+testchange
